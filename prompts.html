@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--https://www.w3schools.com/w3css/tryw3css_templates_photo3.htm-->
+<html lang="en">
+<title>Reflect</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+<body onload="test1()">
+<body>
+  <img src="download.jfif" alt="Border" width="100%" height="150">
+
+    <center> <h1 class="centered">Reflect to discover your <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='["past.", "present.", "future."]'></span>
+</h1> </center>
+<br><br><br>
+    <center>
+    <form action="/action_page.php">
+  <label for="prompts">Choose a prompt:</label>
+  <select name="prompts" id="prompts" value= "What do you want to reflect on?">
+    <optgroup label="Past">
+      <option value="What was the last thing you cried over?">What was the last thing you cried over?</option>
+      <option value="What are some things that make you feel alive?">What are some things that make you feel alive?</option>
+    </optgroup>
+    <optgroup label="Present">
+      <option value="What are you proudest of yourself for this week?">Share five things you're grateful for today.</option>
+      <option value="How are you really?">How are you really?</option>
+    </optgroup>
+    <optgroup label="Future">
+      <option value="What are you most looking forward to this month?" >What are you most looking forward to this month?</option>
+      <option value="What do you value most in your life?">What do you value most in your life?</option>
+    </optgroup>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form></center>
+
+<br><br><br>
+<center><div>
+    <p>
+      <label>Type your response here</label>
+      <br>
+    <textarea type = "text" id = "myText" value = "text here" style = "width:500px; height:300px;"/>
+          
+
+      </textarea>
+      <center>
+            <input type="button" onclick="writeFile()" value = "Submit">
+        </p>
+  </div></center>
+<script>
+  function getPrompt() {
+    var prompts = ["What are you proudest of yourself for this week?",
+                    "What was the last thing you cried over?",
+                    "How are you really?",
+                    "What are you most looking forward to this month?",
+                    "What do you value most in your life?"];
+    var rand = Math.floor(Math.random() * prompts.length + 1);
+    console.log(prompts[rand]);
+}
+function test1 (){
+  console.log("hi");
+}
+
+function writeFile (){
+  var x = document.getElementById("myText").value;
+  console.log(x);
+}
+
+  </script>
+  <script src="script.js">
+     
+  }
+  </script>
